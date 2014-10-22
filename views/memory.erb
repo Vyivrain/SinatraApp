@@ -1,0 +1,28 @@
+<h1> Memory Usage </h1>
+
+<section class = "box">
+	<table>
+		<p id = "line0">
+			<tr>
+				<% arMem[0].split(/\W+/).each do |e| %>
+					<th> <%= e %> </th>
+				<% end %>
+			</tr>
+		</p>
+		<p id = "line1">
+			<tr>
+				<% arMem[1].split(/\W+/).each_with_index do |e,i| %>
+					<%# next if i == 0  %>
+					<td> <%= e %> </td>
+				<% end %>
+			</tr>
+		</p>
+	</table>
+	<p> <%= arMem[2] %> </p>
+	<p> <%= arMem[3] %> </p>
+</section>
+
+<section>
+	<a href = "/" class="back"> Go Back </a>
+</section>
+

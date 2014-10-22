@@ -1,0 +1,10 @@
+.disk {
+	border: 3px solid #6F256F;
+	padding-left: 20px;
+	width: 25%;
+	box-shadow: 10px 10px 5px #5F2A21; 
+}
+
+.back {
+	margin-top: 20px;
+}
