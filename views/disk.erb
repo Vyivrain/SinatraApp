@@ -4,6 +4,16 @@
 	<% end %>
 </section>
 
+<form>
+	<p> Save data: </p>
+	<% fileArr.each_with_index do |e,i| %>
+		<input id="info<%= i %>" name="info<%= i %>" value="<%= e %>" type="hidden">
+	<% end %>
+	<input id="title" name="title" value="Disk" type="hidden">
+	<input id="date" name="date" value="<%= DateTime.now %>" type="hidden">
+	<input type="submit" value="Save">
+</form>
+
 <section class = "back">
 	<a href = "/" class="back"> Go Back </a>
 </section>

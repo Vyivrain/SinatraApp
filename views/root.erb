@@ -1,4 +1,12 @@
 <ul>
-	<li><a href = "/memory"> Memory </a></li>
-	<li><a href = "/disk"> Disk </a></li> 
+	<li><a href = "/memory">Current Memory </a></li>
+	<li><a href = "/disk">Current Disk </a></li> 
 </ul>
+
+<% @statistics.each do |e| %>
+	<div class="box">
+		<p> <%= e.title %> </p>
+		<p> <%= e.date %> </p>
+		<p> <%= e.info %> </p>
+	</div>
+<% end %>

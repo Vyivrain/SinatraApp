@@ -12,7 +12,7 @@
 		<p id = "line1">
 			<tr>
 				<% arMem[1].split(/\W+/).each_with_index do |e,i| %>
-					<%# next if i == 0  %>
+
 					<td> <%= e %> </td>
 				<% end %>
 			</tr>
@@ -21,6 +21,16 @@
 	<p> <%= arMem[2] %> </p>
 	<p> <%= arMem[3] %> </p>
 </section>
+
+<form>
+	<p> Save data: </p>
+	<% arMem.each_with_index do |e,i| %>
+		<input id="info<%= i %>" name="info<%= i %>" value="<%= e %>" type="hidden">
+	<% end %>
+	<input id="title" name="title" value="Memory" type="hidden">
+	<input id="date" name="date" value="<%= DateTime.now %>" type="hidden">
+	<input type="submit" value="Save">
+</form>
 
 <section>
 	<a href = "/" class="back"> Go Back </a>
